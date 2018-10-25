@@ -42,8 +42,13 @@
 <body class="hold-transition skin-blue sidebar-mini">
 
     <section id="container" class="">
+    @if (Auth::guard('admin')->check())
         @include('admin.header.header')
         @include('admin.sidebar.sidebar')
+        @yield('content')
+    @else
+        @yield('content')
+    @endif
     </section>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
