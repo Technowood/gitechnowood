@@ -15,7 +15,7 @@ class AuthController extends Controller
     protected $guard='admin';
     public function showLoginForm()
     {
-        if (Auth::guard('admin')->check())
+        if(Auth::guard('admin')->check())
         {
             return redirect('/dashboard');
         }
