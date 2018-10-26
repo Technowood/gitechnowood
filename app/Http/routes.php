@@ -10,9 +10,11 @@ Route::group(['middleware'=>['admin']],function(){
 
 /*Route::get('/create',function(){
     App\User::create([
-        'name'=>'fanny',
-        'username'=>'fanny',
-        'email'=>'fany@gmail.com',
+        'name'=>'Joel',
+        'username'=>'Joel',
+        'email'=>'joel@gmail.com',
         'password'=>bcrypt('1234'),
     ]);
 });*/
+Route::get('/altadm','administradores@altadmin');
+Route::POST('/guardadm','administradores@guardadmin')->name('guardadmin');
